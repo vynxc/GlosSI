@@ -28,6 +28,6 @@ if (!(Test-Path 'steamgrid_api_keys.h')) {
 cd ../
 
 if (!(Test-Path 'steamgrid.exe')) {
-    Invoke-WebRequest -o steamgrid.zip https://github.com/boppreh/steamgrid/releases/download/v3.4.0/steamgrid_windows.zip
+    Invoke-WebRequest -OutFile steamgrid.zip https://github.com/boppreh/steamgrid/releases/download/v3.4.0/steamgrid_windows.zip
     7z e steamgrid.zip  steamgrid.exe
 }
