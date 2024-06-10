@@ -23,6 +23,9 @@ jobs:
         with:
           cmake-version: '3.16.x'
 
+      - name: Setup MSVC dev cmd
+        uses: ilammy/msvc-dev-cmd@v1
+
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v2
 
