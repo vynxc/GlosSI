@@ -1,4 +1,6 @@
+try {
 Remove-Item -Recurse -Force "x64\Release"
+} catch {}
 
 .\prebuild.ps1
 
