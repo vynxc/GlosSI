@@ -21,7 +21,7 @@ jobs:
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
-          version: '6.6.*'
+          version: '6.3.1'
 
       - name: Setup cmake
         uses: jwlawson/actions-setup-cmake@v2
@@ -43,6 +43,11 @@ jobs:
         shell: pwsh
         run: |
           .\build.ps1
+
+      - name: Bundle
+        shell: pwsh
+        run: |
+          .\bundle-zip.ps1
 
       - name: Upload to Artifact
         uses: actions/upload-artifact@v4

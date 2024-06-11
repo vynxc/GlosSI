@@ -15,8 +15,8 @@ cd ..
 New-Item -ItemType Directory -Force -Path "x64\Release"
 cd ./x64/Release/
 
-$env:Path += ';C:\Qt\6.3.1\msvc2019_64\bin'
-$env:Path += ';C:\Program Files\7-Zip'
+$env:Path += ';.\Qt\6.3.1\msvc2019_64\bin'
+# $env:Path += ';C:\Program Files\7-Zip'
 
 Get-ChildItem -Rec | Where {$_.Extension -match "lib"} | Remove-Item
 $env:Path = "$env:QTDIR\bin;$env:Path"
@@ -36,7 +36,7 @@ Copy-Item "..\..\THIRD_PARTY_LICENSES.txt" -Destination "./THIRD_PARTY_LICENSES.
 Copy-Item "..\..\SteamTweaks\dist" -Destination "./SteamTweaks" -Recurse
 
 
-7z a GlosSI-snapshot.zip *
+# 7z a GlosSI-snapshot.zip *
 
 cd ../..
 
