@@ -15,7 +15,7 @@ cd ..
 New-Item -ItemType Directory -Force -Path "x64\Release"
 cd ./x64/Release/
 
-$env:Path += ';.\Qt\6.3.1\msvc2019_64\bin'
+$env:Path += ';..\..\Qt\6.3.1\msvc2019_64\bin'
 # $env:Path += ';C:\Program Files\7-Zip'
 
 Get-ChildItem -Rec | Where {$_.Extension -match "lib"} | Remove-Item
