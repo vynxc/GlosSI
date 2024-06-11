@@ -12,6 +12,7 @@ npm i
 npm run build
 cd ..
 
+New-Item -ItemType Directory -Force -Path "x64\Release"
 cd ./x64/Release/
 
 $env:Path += ';C:\Qt\6.3.1\msvc2019_64\bin'
@@ -35,7 +36,7 @@ Copy-Item "..\..\THIRD_PARTY_LICENSES.txt" -Destination "./THIRD_PARTY_LICENSES.
 Copy-Item "..\..\SteamTweaks\dist" -Destination "./SteamTweaks" -Recurse
 
 
-#7z a GlosSI-snapshot.zip *
+7z a GlosSI-snapshot.zip *
 
 cd ../..
 
