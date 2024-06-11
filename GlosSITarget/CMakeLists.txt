@@ -17,6 +17,7 @@ add_executable(${PROJECT_NAME}
   TargetWindow.cpp
 )
 
+target_include_directories(${PROJECT_NAME} PRIVATE ../CEFInjectLib)
 target_include_directories(${PROJECT_NAME} PRIVATE ../deps/SFML/include)
 if (CMAKE_BUILD_TYPE EQUAL "DEBUG")
   target_link_directories(${PROJECT_NAME} PRIVATE ../deps/SFML/out/Debug/lib)
