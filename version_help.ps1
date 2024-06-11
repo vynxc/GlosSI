@@ -21,7 +21,7 @@ inline const auto IS_SNAPSHOT = $( If ($tag.Length -gt 10) {'true'} Else {'false
 inline const auto VERSION_MAJOR = $($cleanTag.Split('.')[0]);
 inline const auto VERSION_MINOR = $($cleanTag.Split('.')[1]);
 inline const auto VERSION_PATCH = $($cleanTag.Split('.')[2]);
-inline const auto VERSION_REVISION = $($cleanTag.Split('.')[3]);
+inline const auto VERSION_REVISION = ""$($cleanTag.Split('.')[3])"";
 }
 
 "
